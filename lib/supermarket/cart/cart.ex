@@ -5,7 +5,7 @@ defmodule Supermarket.Cart do
   use Supermarket.Schema
   import Ecto.Changeset
 
-  # alias Supermarket.Cart.Item
+  alias Supermarket.Cart.Item
 
   @status [:draft, :completed]
   def all_status, do: @status
@@ -15,7 +15,7 @@ defmodule Supermarket.Cart do
     field :status, Ecto.Enum, values: @status, default: :draft
     field :total_price, :integer, default: 0
 
-    # has_many(:items, Item, on_delete: :delete_all)
+    has_many(:items, Item, on_delete: :delete_all)
 
     timestamps()
   end
