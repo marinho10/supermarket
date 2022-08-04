@@ -1,14 +1,18 @@
 # Supermarket
 
+## Installing Elixir and Erlang With ASDF
+
+Please follow this [guide](https://www.pluralsight.com/guides/installing-elixir-erlang-with-asdf) .
+
+## Start
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+Now you can visit [`localhost:4000/api/graphiql`](http://localhost:4000/api/graphiql) from your browser.
 
 ## Learn more
 
