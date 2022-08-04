@@ -10,12 +10,12 @@ defmodule Supermarket.Products do
   @doc """
   Gets a product by id.
 
-  Returns `%User{}` or `nil`
+  Returns `%Product{}` or `nil`
 
   ## Examples
 
     iex> Supermarket.Products.get_by_id("aaaa-bbbb-cccc-dddd")
-    %User{}
+    %Product{}
 
     iex> Supermarket.Products.get_by_id("invalid-id")
     nil
@@ -27,6 +27,8 @@ defmodule Supermarket.Products do
 
   @doc """
   Lists all products
+
+  Returns `[%Product{}, ...]` or `[]`
 
   ## Examples
 

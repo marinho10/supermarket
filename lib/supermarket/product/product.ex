@@ -5,10 +5,14 @@ defmodule Supermarket.Product do
   use Supermarket.Schema
   import Ecto.Changeset
 
+  alias Supermarket.Product.Rule
+
   schema "products" do
     field :code, :string
     field :name, :string
     field :price, :integer
+
+    has_many(:rules, Rule, on_delete: :delete_all)
 
     timestamps()
   end
