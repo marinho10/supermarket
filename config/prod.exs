@@ -27,7 +27,7 @@ secret_key_base =
     """
 
 # Endpoint configuration
-config :threat_optix, SupermarketWeb.Endpoint,
+config :supermarket, SupermarketWeb.Endpoint,
   url: [host: System.get_env("URL_HOST") || "example.com", port: 443],
   load_from_system_env: false,
   server: true,
