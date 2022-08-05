@@ -1,4 +1,4 @@
-defmodule SupermarketGraphQL.Cart.Query.CartTest do
+defmodule SupermarketGraphQL.Product.Query.ProductTest do
   use SupermarketWeb.ConnCase, async: true
 
   import Supermarket.Factory
@@ -6,24 +6,29 @@ defmodule SupermarketGraphQL.Cart.Query.CartTest do
   @base_url "/api/graphql"
 
   setup do
-    cart = insert(:cart)
+    product = insert(:product)
+    insert(:product_rule, %{product: product})
 
-    {:ok, %{cart: cart}}
+    {:ok, %{product: product}}
   end
 
-  describe "cart" do
+  describe "product" do
     @cart_query """
-      query cart ($id: ID!) {
-        cart(id: $id) {
+      query product ($id: ID!) {
+        product(id: $id) {
           id
           code
+          rules {
+            id
+            expression
+          }
         }
       }
     """
 
     @tag :normal
-    test "success", %{cart: cart} do
-      variables = %{"id" => cart.id}
+    test "success", %{product: product} do
+      variables = %{"id" => product.id}
 
       response =
         build_conn()
@@ -31,12 +36,15 @@ defmodule SupermarketGraphQL.Cart.Query.CartTest do
 
       assert %{
                "data" => %{
-                 "cart" => %{
-                   "id" => cart.id,
-                   "code" => cart.code
+                 "product" => %{
+                   "id" => product_id,
+                   "code" => _,
+                   "rules" => [_]
                  }
                }
-             } == json_response(response, 200)
+             } = json_response(response, 200)
+
+      assert product_id == product.id
     end
 
     @tag :normal
@@ -48,7 +56,7 @@ defmodule SupermarketGraphQL.Cart.Query.CartTest do
         |> post(@base_url, %{query: @cart_query, variables: variables})
 
       assert %{
-               "data" => %{"cart" => nil}
+               "data" => %{"product" => nil}
              } = json_response(response, 200)
     end
   end

@@ -12,4 +12,12 @@ defmodule SupermarketGraphQL.Cart.Resolver do
   def cart(_, %{id: id}, _), do: {:ok, Carts.get_by_id(id)}
 
   def carts(_, _, _), do: {:ok, Carts.list()}
+
+  #
+  # Mutations
+  #
+
+  def cart_create(_, %{id: id}, _), do: {:ok, Carts.create(id)}
+
+  def cart_complete(_, _, _), do: {:ok, Carts.complete(id)}
 end

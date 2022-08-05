@@ -21,11 +21,15 @@ defmodule SupermarketGraphQL.Schema do
   import_types(Absinthe.Type.Custom)
   import_types(SupermarketGraphQL.Application.Types)
   import_types(SupermarketGraphQL.Cart.Types)
+  import_types(SupermarketGraphQL.Cart.Item.Types)
+  import_types(SupermarketGraphQL.Product.Types)
+  import_types(SupermarketGraphQL.Product.Rule.Types)
   import_types(SupermarketGraphQL.General.Types)
 
   # Queries
   query do
     import_fields(:application_queries)
     import_fields(:cart_queries)
+    import_fields(:product_queries)
   end
 end

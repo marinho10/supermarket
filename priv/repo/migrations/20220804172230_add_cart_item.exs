@@ -7,7 +7,7 @@ defmodule Supermarket.Repo.Migrations.AddCartItem do
       add :unit_price, :bigint, default: 0
       add :one_free, :boolean, default: false
       add :product_id, references(:products, on_delete: :delete_all), null: false
-      add :cart_id, references(:products, on_delete: :delete_all), null: false
+      add :cart_id, references(:carts, on_delete: :delete_all), null: false
 
       timestamps()
     end

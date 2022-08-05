@@ -4,8 +4,11 @@ defmodule SupermarketGraphQL.Dataloader do
   """
   import Ecto.Query, warn: false
 
-  alias ThreatOptix.Cart
-  alias ThreatOptix.Repo
+  alias Supermarket.Cart
+  alias Supermarket.Cart.Item
+  alias Supermarket.Product
+  alias Supermarket.Product.Rule
+  alias Supermarket.Repo
 
   ### DATALOADER DATASOURCE
 
@@ -17,6 +20,24 @@ defmodule SupermarketGraphQL.Dataloader do
     attrs
     |> Map.put_new(:order, :inserted_at)
     |> Enum.reduce(Cart, &apply_param/2)
+  end
+
+  def query(Item, attrs) do
+    attrs
+    |> Map.put_new(:order, :inserted_at)
+    |> Enum.reduce(Item, &apply_param/2)
+  end
+
+  def query(Product, attrs) do
+    attrs
+    |> Map.put_new(:order, :inserted_at)
+    |> Enum.reduce(Product, &apply_param/2)
+  end
+
+  def query(Rule, attrs) do
+    attrs
+    |> Map.put_new(:order, :inserted_at)
+    |> Enum.reduce(Rule, &apply_param/2)
   end
 
   def query(queryable, _params), do: queryable

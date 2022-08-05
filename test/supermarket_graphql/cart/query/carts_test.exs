@@ -17,6 +17,13 @@ defmodule SupermarketGraphQL.Cart.Query.CartsTest do
         carts {
           id
           code
+          items {
+            id
+            product {
+              id
+              code
+            }
+          }
         }
       }
     """

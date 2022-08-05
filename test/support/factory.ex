@@ -39,11 +39,11 @@ defmodule Supermarket.Factory do
 
   def cart_item_factory do
     %Item{
-      cart: build(:cart),
-      product: build(:product),
       quantity: Enum.random(1..10),
       unit_price: Enum.random(100..11_000),
-      one_free: sequence(:cart_item_one_free, [true, false])
+      one_free: sequence(:cart_item_one_free, [true, false]),
+      cart: build(:cart),
+      product: build(:product)
     }
   end
 end
