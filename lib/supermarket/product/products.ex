@@ -36,7 +36,7 @@ defmodule Supermarket.Products do
     [%Product{}, ...]
 
   """
-  def list() do
+  def list do
     Query.base()
     |> Repo.all()
   end
