@@ -26,7 +26,6 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-# Endpoint configuration
 config :supermarket, SupermarketWeb.Endpoint,
   url: [host: System.get_env("URL_HOST") || "example.com", port: 443],
   load_from_system_env: false,
