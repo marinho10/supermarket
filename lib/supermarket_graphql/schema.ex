@@ -32,4 +32,9 @@ defmodule SupermarketGraphQL.Schema do
     import_fields(:cart_queries)
     import_fields(:product_queries)
   end
+
+  # Mutations
+  mutation do
+    import_fields(:cart_mutations)
+  end
 end

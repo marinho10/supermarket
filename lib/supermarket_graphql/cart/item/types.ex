@@ -15,7 +15,7 @@ defmodule SupermarketGraphQL.Cart.Item.Types do
     field(:id, non_null(:id))
     field(:quantity, non_null(:integer))
     field(:unit_price, non_null(:integer))
-    field(:one_free, non_null(:boolean))
+    field(:free, non_null(:boolean))
 
     field(:cart, non_null(:cart)) do
       resolve(dataloader(Repo))

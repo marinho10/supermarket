@@ -41,7 +41,7 @@ p2 =
 Supermarket.Repo.insert!(
   %Supermarket.Product.Rule{}
   |> Supermarket.Product.Rule.changeset(%{
-    expression: ">=3=450",
+    expression: "quantity>=3=>450",
     product_id: p2.id
   })
 )
@@ -59,7 +59,7 @@ p3 =
 Supermarket.Repo.insert!(
   %Supermarket.Product.Rule{}
   |> Supermarket.Product.Rule.changeset(%{
-    expression: ">=3=(price*2/3)",
+    expression: "quantity>=3=>price*2/3",
     product_id: p3.id
   })
 )

@@ -15,9 +15,14 @@ defmodule SupermarketGraphQL.Cart.Types do
 
   object :cart do
     field(:id, non_null(:id))
-    field(:code, non_null(:string))
     field(:status, non_null(:cart_status))
     field(:total_price, non_null(:integer))
+
+    field(:final_price, non_null(:string)) do
+      resolve(fn %{total_price: total_price}, _, _ ->
+        {:ok, "£#{:erlang.float_to_binary(total_price / 100, decimals: 2)}"}
+      end)
+    end
 
     field(:items, non_null(list_of(non_null(:cart_item)))) do
       resolve(dataloader(Repo))

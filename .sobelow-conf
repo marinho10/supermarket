@@ -8,5 +8,5 @@
   out: "",
   threshold: "low",
   ignore: ["Config.HTTPS", "Config.Headers", "Config.CSP", "Config.CSRF"],
-  ignore_files: ["config/prod.secret.exs","lib/supermarket_graphql/dataloader.ex"]
+  ignore_files: ["config/prod.secret.exs","lib/supermarket_graphql/dataloader.ex", "lib/supermarket/cart/carts.ex"]
 ]

@@ -14,7 +14,7 @@ defmodule Supermarket.Cart.Item do
   schema "cart_items" do
     field :quantity, :integer, default: 0
     field :unit_price, :integer, default: 0
-    field :one_free, :boolean, default: false
+    field :free, :boolean, default: false
 
     belongs_to(:product, Product)
     belongs_to(:cart, Cart)
@@ -22,7 +22,7 @@ defmodule Supermarket.Cart.Item do
     timestamps()
   end
 
-  @required_fields ~w(quantity unit_price one_free product_id cart_id)a
+  @required_fields ~w(quantity unit_price free product_id cart_id)a
   @optional_fields ~w()a
 
   @doc false

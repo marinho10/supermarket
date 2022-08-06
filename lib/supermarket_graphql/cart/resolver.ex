@@ -17,7 +17,7 @@ defmodule SupermarketGraphQL.Cart.Resolver do
   # Mutations
   #
 
-  def cart_create(_, %{id: id}, _), do: {:ok, Carts.create(id)}
+  def cart_create(_, %{basket: basket}, _), do: Carts.create(basket)
 
-  def cart_complete(_, _, _), do: {:ok, Carts.complete(id)}
+  def cart_complete(_, %{id: id}, _), do: Carts.complete(id)
 end
