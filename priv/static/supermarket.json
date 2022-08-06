@@ -1,0 +1,235 @@
+{
+  "key": "graphiql",
+  "lastId": 8,
+  "tabIds": [
+    "tab1",
+    "tab2",
+    "tab3",
+    "tab4",
+    "tab5",
+    "tab6",
+    "tab7",
+    "tab8"
+  ],
+  "closedTabs": [],
+  "defaultUrl": "http://localhost:4000/api/graphiql",
+  "defaultWebsocketUrl": "",
+  "defaultQuery": "",
+  "defaultVariables": "",
+  "defaultProxy": false,
+  "defaultHeaders": [],
+  "usedUrls": [
+    "http://localhost:4000/api/graphql",
+    "http://localhost:4000/api/graphiql"
+  ],
+  "recentHeaders": [],
+  "maxTabHistory": 20,
+  "maxUrlHistory": 20,
+  "maxHistory": 20,
+  "savedQueries": [],
+  "activeId": "tab8",
+  "tabs": [
+    {
+      "id": "tab1",
+      "name": "create Basket: GR1,SR1,GR1,GR1,CF1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation {\n  cartCreate(basket: \"GR1,SR1,GR1,GR1,CF1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": null
+        },
+        {
+          "query": "mutation {\n  cartCreate(basket: \"GR1,SR1,GR1,GR1,CF1\") {\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": null
+        },
+        {
+          "query": "mutation {\n  cartCreate(basket: \"GR1,SR1,GR1,GR1,CF1\") {\n    totalPrice\n    items {\n      product {\n        code\n      }\n      quantity\n    }\n  }\n}",
+          "variables": null
+        }
+      ],
+      "graphiql:query": "mutation {\n  cartCreate(basket: \"GR1,SR1,GR1,GR1,CF1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation {\\n  cartCreate(basket: \\\"GR1,SR1,GR1,GR1,CF1\\\") {\\n    totalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      quantity\\n    }\\n  }\\n}\"},{\"query\":\"mutation {\\n  cartCreate(basket: \\\"GR1,SR1,GR1,GR1,CF1\\\") {\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\"},{\"query\":\"mutation {\\n  cartCreate(basket: \\\"GR1,SR1,GR1,GR1,CF1\\\") {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\"}]}",
+      "graphiql:docExplorerWidth": 350,
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:editorFlex": 1
+    },
+    {
+      "id": "tab2",
+      "name": "create basket: GR1,GR1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation {\n  cartCreate(basket: \"GR1,GR1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": null
+        }
+      ],
+      "graphiql:query": "mutation {\n  cartCreate(basket: \"GR1,GR1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:editorFlex": 1,
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:docExplorerWidth": 350,
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation {\\n  cartCreate(basket: \\\"GR1,GR1\\\") {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\"}]}"
+    },
+    {
+      "id": "tab3",
+      "name": "create Basket: SR1,SR1,GR1,SR1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation {\n  cartCreate(basket: \"SR1,SR1,GR1,SR1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": null
+        }
+      ],
+      "graphiql:query": "mutation {\n  cartCreate(basket: \"SR1,SR1,GR1,SR1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:editorFlex": 1,
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:docExplorerWidth": 350,
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation {\\n  cartCreate(basket: \\\"SR1,SR1,GR1,SR1\\\") {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\"}]}"
+    },
+    {
+      "id": "tab4",
+      "name": "create Basket: GR1,CF1,SR1,CF1,CF1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation {\n  cartCreate(basket: \"GR1,CF1,SR1,CF1,CF1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": null
+        }
+      ],
+      "graphiql:query": "mutation {\n  cartCreate(basket: \"GR1,CF1,SR1,CF1,CF1\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:editorFlex": 1,
+      "graphiql:docExplorerWidth": 350,
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation {\\n  cartCreate(basket: \\\"GR1,CF1,SR1,CF1,CF1\\\") {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\"}]}"
+    },
+    {
+      "id": "tab5",
+      "name": "Complete Cart GR1,SR1,GR1,GR1,CF1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": {
+            "cart_id": "bb01f17f-d3c6-4c0d-aac3-13e74acc9781"
+          }
+        },
+        {
+          "query": "mutation {\n  cartComplete(id: \"4b38cca3-d08e-4f9a-b9d9-5be8e415b6bf\") {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": null
+        }
+      ],
+      "graphiql:query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:variables": "{\n  \"cart_id\": \"bb01f17f-d3c6-4c0d-aac3-13e74acc9781\"\n}",
+      "graphiql:docExplorerWidth": 350,
+      "graphiql:editorFlex": 1,
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation {\\n  cartComplete(id: \\\"4b38cca3-d08e-4f9a-b9d9-5be8e415b6bf\\\") {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation cartComplete($cart_id: ID!) {\\n  cartComplete(id: $cart_id) {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\",\"variables\":\"{\\n  \\\"cart_id\\\": \\\"bb01f17f-d3c6-4c0d-aac3-13e74acc9781\\\"\\n}\",\"operationName\":\"cartComplete\"}]}",
+      "graphiql:variableEditorHeight": 383,
+      "graphiql:operationName": "cartComplete"
+    },
+    {
+      "id": "tab6",
+      "name": "complete Cart GR1,GR1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": {
+            "cart_id": "920be2ff-7b56-4b9a-a67f-a4aa48bfc31e"
+          }
+        }
+      ],
+      "graphiql:query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:variables": "{\n  \"cart_id\": \"920be2ff-7b56-4b9a-a67f-a4aa48bfc31e\"\n}",
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation cartComplete($cart_id: ID!) {\\n  cartComplete(id: $cart_id) {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\",\"variables\":\"{\\n  \\\"cart_id\\\": \\\"920be2ff-7b56-4b9a-a67f-a4aa48bfc31e\\\"\\n}\",\"operationName\":\"cartComplete\"}]}",
+      "graphiql:operationName": "cartComplete",
+      "graphiql:editorFlex": 1,
+      "graphiql:variableEditorHeight": 334,
+      "graphiql:docExplorerWidth": 350
+    },
+    {
+      "id": "tab7",
+      "name": "complete Cart SR1,SR1,GR1,SR1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": {
+            "cart_id": "87c788e9-ae78-4bb0-a6fe-fb370e8a0288"
+          }
+        },
+        {
+          "query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": {
+            "cart_id": "8d4c64c6-3855-4835-84cd-bbb04b2a8692"
+          }
+        }
+      ],
+      "graphiql:query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:variables": "{\n  \"cart_id\": \"87c788e9-ae78-4bb0-a6fe-fb370e8a0288\"\n}",
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation cartComplete($cart_id: ID!) {\\n  cartComplete(id: $cart_id) {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\",\"variables\":\"{\\n  \\\"cart_id\\\": \\\"8d4c64c6-3855-4835-84cd-bbb04b2a8692\\\"\\n}\",\"operationName\":\"cartComplete\"},{\"query\":\"mutation cartComplete($cart_id: ID!) {\\n  cartComplete(id: $cart_id) {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\",\"variables\":\"{\\n  \\\"cart_id\\\": \\\"87c788e9-ae78-4bb0-a6fe-fb370e8a0288\\\"\\n}\",\"operationName\":\"cartComplete\"}]}",
+      "graphiql:operationName": "cartComplete",
+      "graphiql:editorFlex": 1,
+      "graphiql:variableEditorHeight": 448,
+      "graphiql:docExplorerWidth": 350
+    },
+    {
+      "id": "tab8",
+      "name": "complete Cart GR1,CF1,SR1,CF1,CF1",
+      "url": "http://localhost:4000/api/graphql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [
+        {
+          "query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+          "variables": {
+            "cart_id": "8d4c64c6-3855-4835-84cd-bbb04b2a8692"
+          }
+        }
+      ],
+      "graphiql:query": "mutation cartComplete($cart_id: ID!) {\n  cartComplete(id: $cart_id) {\n    id\n    finalPrice\n    items {\n      product {\n        code\n      }\n      unitPrice\n      quantity\n    }\n  }\n}",
+      "graphiql:variables": "{\n  \"cart_id\": \"8d4c64c6-3855-4835-84cd-bbb04b2a8692\"\n}",
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation cartComplete($cart_id: ID!) {\\n  cartComplete(id: $cart_id) {\\n    id\\n    finalPrice\\n    items {\\n      product {\\n        code\\n      }\\n      unitPrice\\n      quantity\\n    }\\n  }\\n}\",\"variables\":\"{\\n  \\\"cart_id\\\": \\\"8d4c64c6-3855-4835-84cd-bbb04b2a8692\\\"\\n}\",\"operationName\":\"cartComplete\"}]}",
+      "graphiql:operationName": "cartComplete",
+      "graphiql:editorFlex": 1,
+      "graphiql:variableEditorHeight": 335,
+      "graphiql:docExplorerWidth": 350
+    }
+  ]
+}

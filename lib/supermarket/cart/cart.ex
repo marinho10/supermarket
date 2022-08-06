@@ -12,15 +12,15 @@ defmodule Supermarket.Cart do
 
   schema "carts" do
     field :status, Ecto.Enum, values: @status, default: :draft
-    field :total_price, :integer, default: 0
+    field :total_price, :integer
 
     has_many(:items, Item, on_delete: :delete_all)
 
     timestamps()
   end
 
-  @required_fields ~w(status total_price)a
-  @optional_fields ~w()a
+  @required_fields ~w(status)a
+  @optional_fields ~w(total_price)a
 
   @doc false
   def changeset(schema, attrs) do

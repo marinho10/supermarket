@@ -4,7 +4,7 @@ defmodule Supermarket.Repo.Migrations.AddCart do
   def up do
     create_if_not_exists(table(:carts)) do
       add :status, :string, null: false, default: "draft"
-      add :total_price, :bigint, null: false, default: 0
+      add :total_price, :bigint
 
       timestamps()
     end

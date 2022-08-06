@@ -119,6 +119,8 @@ defmodule Supermarket.Carts do
 
   defp complete_aux(nil), do: {:ok, nil}
 
+  defp complete_aux(%{id: id, status: :completed}), do: {:ok, get_by_id(id)}
+
   defp complete_aux(cart) do
     Multi.new()
     |> Multi.run(:items, fn _, _ ->

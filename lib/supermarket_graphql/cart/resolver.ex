@@ -13,6 +13,12 @@ defmodule SupermarketGraphQL.Cart.Resolver do
 
   def carts(_, _, _), do: {:ok, Carts.list()}
 
+  def final_price(%{total_price: total_price}, _, _) when total_price in [nil, ""], do: {:ok, "-"}
+
+  def final_price(%{total_price: total_price}, _, _) do
+    {:ok, "£#{:erlang.float_to_binary(total_price / 100, decimals: 2)}"}
+  end
+
   #
   # Mutations
   #

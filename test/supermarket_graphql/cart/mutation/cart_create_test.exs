@@ -55,6 +55,7 @@ defmodule SupermarketGraphQL.Cart.Mutation.CartCreateTest do
               code
             }
           }
+          final_price
       }
     }
     """
@@ -74,7 +75,8 @@ defmodule SupermarketGraphQL.Cart.Mutation.CartCreateTest do
                      %{"product" => %{"code" => "CF1"}, "quantity" => 1},
                      %{"product" => %{"code" => "GR1"}, "quantity" => 3},
                      %{"product" => %{"code" => "SR1"}, "quantity" => 1}
-                   ]
+                   ],
+                   "final_price" => "-"
                  }
                }
              } == json_response(response, 200)
@@ -93,7 +95,8 @@ defmodule SupermarketGraphQL.Cart.Mutation.CartCreateTest do
                  "cartCreate" => %{
                    "items" => [
                      %{"product" => %{"code" => "GR1"}, "quantity" => 2}
-                   ]
+                   ],
+                   "final_price" => "-"
                  }
                }
              } == json_response(response, 200)
@@ -113,7 +116,8 @@ defmodule SupermarketGraphQL.Cart.Mutation.CartCreateTest do
                    "items" => [
                      %{"product" => %{"code" => "GR1"}, "quantity" => 1},
                      %{"product" => %{"code" => "SR1"}, "quantity" => 3}
-                   ]
+                   ],
+                   "final_price" => "-"
                  }
                }
              } == json_response(response, 200)
@@ -134,7 +138,8 @@ defmodule SupermarketGraphQL.Cart.Mutation.CartCreateTest do
                      %{"product" => %{"code" => "CF1"}, "quantity" => 3},
                      %{"product" => %{"code" => "GR1"}, "quantity" => 1},
                      %{"product" => %{"code" => "SR1"}, "quantity" => 1}
-                   ]
+                   ],
+                   "final_price" => "-"
                  }
                }
              } == json_response(response, 200)
@@ -151,7 +156,8 @@ defmodule SupermarketGraphQL.Cart.Mutation.CartCreateTest do
       assert %{
                "data" => %{
                  "cartCreate" => %{
-                   "items" => []
+                   "items" => [],
+                   "final_price" => "-"
                  }
                }
              } == json_response(response, 200)
