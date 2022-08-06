@@ -11,7 +11,6 @@ defmodule Supermarket.Cart do
   def all_status, do: @status
 
   schema "carts" do
-    field :code, :string
     field :status, Ecto.Enum, values: @status, default: :draft
     field :total_price, :integer, default: 0
 
@@ -20,7 +19,7 @@ defmodule Supermarket.Cart do
     timestamps()
   end
 
-  @required_fields ~w(code status total_price)a
+  @required_fields ~w(status total_price)a
   @optional_fields ~w()a
 
   @doc false
@@ -28,6 +27,5 @@ defmodule Supermarket.Cart do
     schema
     |> cast(attrs, @required_fields ++ @optional_fields)
     |> validate_required(@required_fields)
-    |> unique_constraint(:code, message: "code_been_taken")
   end
 end

@@ -19,12 +19,10 @@ defmodule SupermarketGraphQL.Cart.Query.CartTest do
       query cart ($id: ID!) {
         cart(id: $id) {
           id
-          code
           items {
             id
             product {
               id
-              code
             }
           }
         }
@@ -43,7 +41,6 @@ defmodule SupermarketGraphQL.Cart.Query.CartTest do
                "data" => %{
                  "cart" => %{
                    "id" => cart_id,
-                   "code" => _,
                    "items" => [_]
                  }
                }

@@ -16,7 +16,6 @@ defmodule SupermarketGraphQL.Cart.Query.CartsTest do
       query carts {
         carts {
           id
-          code
           items {
             id
             product {
